@@ -1,0 +1,71 @@
+<!-----include header--->
+<%-include('include/_header')%>
+<!--/include header----->
+
+<!---new user-->
+<div class="user">
+    <a href="/">
+    <span><i class="fas fa-angle-double-left"></i>All Users</span>
+</a>
+</div>
+<div class="title text-center">
+    <h4>Update User</h4>
+    <h6>Use the below form update the existing account</h6>
+</div>
+    <!-----include add user form--->
+    <form method="POST" class="newuserform" id="update_user">
+        <div class="row mb-3">
+          <input type="hidden" name="id" value="<%= user._id %>">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="input" name="name" placeholder="Example" value="<%= user.name %>">
+            </div>
+          </div>
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control"  value="<%= user.email%>" id="inputEmail3" name="email" placeholder="@example.com">
+          </div>
+        </div>
+        <fieldset class="row mb-3">
+          <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="Male" <%= user.gender == 'Male' ? 'checked' :''%>>
+              <label class="form-check-label" for="male">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="Female" <%= user.gender == 'Female' ? 'checked' : '' %>>
+              <label class="form-check-label" for="female">
+                Female
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Status</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="Active" <%= user.status == 'Active' ? 'checked' : '' %> >
+                <label class="form-check-label" for="active">
+                  Active
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="Inactive" <%= user.status == 'Inactive' ? 'checked' : '' %> >
+                <label class="form-check-label" for="inactive">
+                  Inactive
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        <button type="submit" class="btn btn-primary submitbtn">Update</button>
+      </form>
+    <!--/include add user form----->
+</div>
+
+<!-----include footer--->
+<%-include('include/_footer')%>
+<!--/include footer----->

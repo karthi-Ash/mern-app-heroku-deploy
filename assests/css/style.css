@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins:ital@1&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+}
+:root {
+  --dark: #2b2d42;
+  --light: #adb5bd;
+  --border: #dee2e6;
+  --border-btn: #edf2f4;
+}
+/********************table*********************************/
+.main {
+  max-width: 1024px;
+  margin: auto;
+}
+.user a {
+  text-decoration: none !important;
+  font-family: "Poppins";
+  color: #2b2d42;
+  box-shadow: 0px 5px 10px var(--border);
+  padding: 0.3rem;
+  color: cornflowerblue;
+}
+.user {
+  margin: 1rem auto;
+}
+.nav-brand {
+  font-size: 1.5em;
+  padding: 0.5rem;
+  background-color: aquamarine;
+}
+.table {
+  margin-top: 1rem !important;
+}
+thead {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid var(--border-btn);
+}
+.table .fas {
+  color: cornflowerblue;
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.6em;
+  font-size: 1em;
+}
+tbody td {
+  text-transform: capitalize;
+  font-size: 1em;
+}
+tbody tr:hover {
+  background-color: aquamarine;
+}
+/*************************************create new user*************************************/
+.title {
+  margin: 1rem auto !important;
+}
+.newuserform {
+  margin: 2rem !important;
+  border: 1px solid #222;
+  padding: 1rem;
+}
+.submitbtn {
+  width: 100%;
+  font-size: 18px;
+}
+@media only screen and (max-width: 1024px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  thead tr {
+    position: relative;
+    top: -9999px;
+    left: -9999px;
+    display: none;
+  }
+  tr {
+    border: 1px solid var(--border);
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+}

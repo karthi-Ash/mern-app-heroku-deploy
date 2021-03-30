@@ -1,0 +1,50 @@
+<form action="/api/users" method="POST" class="newuserform" id="add_user">
+    <div class="row mb-3">
+      <input type="hidden" name="id" value="">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="input" name="name" placeholder="Example">
+        </div>
+      </div>
+    <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" name="email" placeholder="@example.com">
+      </div>
+    </div>
+    <fieldset class="row mb-3">
+      <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="male">
+          <label class="form-check-label" for="male">
+            Male
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="female">
+          <label class="form-check-label" for="female">
+            Female
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0">Status</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="active">
+            <label class="form-check-label" for="active">
+              Active
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="inactive">
+            <label class="form-check-label" for="inactive">
+              Inactive
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    <button type="submit" class="btn btn-primary submitbtn">Create New User</button>
+  </form>
